@@ -1,0 +1,175 @@
+
+nav.navbar{
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    padding-top: 0%;
+}
+
+.navbar-brand{
+    padding-top: 0%;
+}
+.nav-link {
+    padding-right: 16px !important;
+}
+
+.btn-danger {
+    border-radius: 50px;
+    background: #FF2F44;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.banner {
+    background-color: #FF2F44;
+    line-height: 32px;
+    height: 32px;
+    color: #ffff;
+    padding-left: 4%;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.main-header{
+    margin-top: 40px;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 92px;
+    color: #FF2F44;
+}
+
+.second-header{
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 34px;
+    color: #878787;
+    margin-top: 12px;
+}
+
+#cmu {
+    max-width: 60%;
+    display: inline-block;
+    /* margin-top: 40px; */
+
+}
+
+/* .block{
+    max-width: 60%;
+    height: 100%;
+    position: relative;
+    /* overflow: hidden; */
+    /* font-size: 16px;
+    display: flex;
+} */ 
+
+.img-parallax {
+    /* width: 60vw; */
+
+    height: 400px;
+    background-image: url("images/cmu.jpg");
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: flex-end;
+    /* margin-top: -40px; */
+    /* margin-right: -40px; */
+    margin-top: 120px;
+}
+
+#invite {
+    margin-left: -8%;
+    margin-top: -10%;
+}
+
+#overlay{
+    margin-top: 300px;
+    padding: 0px;
+}
+
+#invite {
+    background-color: #fff;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    max-width: 39%;
+    padding: 40px;
+    color: #000000;
+    display: inline-block;
+}
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
+#red_background {
+    background-color: #FF2F44;
+}
+
+#mainText {
+    background-color: #fff;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 36px;
+    height: fit-content;
+    padding: 50px;
+}
+
+@media only screen and (min-width: 992px) {
+    #mainText {
+      /* background-color: lightblue; */
+      transform: translate(-100px, -250px);
+    }
+    .img-parallax{
+        transform: translateY(-60%);
+        margin-left: -15px;
+    }
+  }
+
+.subText {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    color: #C12533;
+    white-space: nowrap;
+    width: 0px;
+}
+
+.container-fluid .row {    
+    margin-left: 0px;    
+    margin-right: 0px;
+    /* overflow-x: hidden; */
+
+}
+
+/* sliding in animation  */
+.come-in {
+    transform: translateX(150px);
+    animation: come-in 0.8s ease forwards;
+}
+
+.come-in:nth-child(odd) {
+    /* animation-duration: 0.6s; So they look staggered */
+}
+  
+@keyframes come-in {
+    to { transform: translateX(0); }
+}
+
+.redbg{
+    background-color: #FF2F44;
+}
