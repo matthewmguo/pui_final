@@ -1,4 +1,9 @@
+/* making sure that nothing flows off the page */
+body {
+    overflow-x: hidden;
+}
 
+/* styling the nav bar */
 nav.navbar{
     font-family: Helvetica;
     font-style: normal;
@@ -10,16 +15,20 @@ nav.navbar{
 .navbar-brand{
     padding-top: 0%;
 }
+
 .nav-link {
     padding-right: 16px !important;
 }
 
+/* second part of the site red bg */
 .btn-danger {
     border-radius: 50px;
     background: #FF2F44;
     padding-left: 30px;
     padding-right: 30px;
 }
+
+/* top banner */
 .banner {
     background-color: #FF2F44;
     line-height: 32px;
@@ -32,26 +41,29 @@ nav.navbar{
     font-size: 12px;
 }
 
+/* white text with info  */
 .main-header{
-    margin-top: 40px;
+    margin-top: 100px;
     font-family: Helvetica;
     font-style: normal;
     font-weight: bold;
-    font-size: 80px;
+    font-size: 88px;
     line-height: 92px;
     color: #FF2F44;
 }
 
+/* whiteboarding, interviewing ect */
 .second-header{
     font-family: Helvetica;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
+    font-size: 36px;
     line-height: 34px;
     color: #878787;
-    margin-top: 12px;
+    margin-top: 20px;
 }
 
+/* image */
 #cmu {
     max-width: 60%;
     display: inline-block;
@@ -59,19 +71,11 @@ nav.navbar{
 
 }
 
-/* .block{
-    max-width: 60%;
-    height: 100%;
-    position: relative;
-    /* overflow: hidden; */
-    /* font-size: 16px;
-    display: flex;
-} */ 
-
+/* parallax effect */
 .img-parallax {
     /* width: 60vw; */
 
-    height: 400px;
+    height: 200px;
     background-image: url("images/cmu.jpg");
     background-attachment: fixed;
     background-position: center top;
@@ -85,11 +89,13 @@ nav.navbar{
     margin-top: 120px;
 }
 
+/* button for invirtation */
 #invite {
     margin-left: -8%;
     margin-top: -10%;
 }
 
+/* overlap button once in mobile */
 #overlay{
     margin-top: 300px;
     padding: 0px;
@@ -108,6 +114,7 @@ nav.navbar{
     display: inline-block;
 }
 
+/* window for thw parallax effect makes rue that you can scroll */
 .parallax-window {
     min-height: 400px;
     background: transparent;
@@ -122,22 +129,53 @@ nav.navbar{
     font-family: Helvetica;
     font-style: normal;
     font-weight: normal;
-    font-size: 32px;
-    line-height: 36px;
+    font-size: 40px;
+    line-height: 50px;
     height: fit-content;
     padding: 50px;
+    
 }
 
-@media only screen and (min-width: 992px) {
+/* desktop full screen */
+@media only screen and (min-width: 1200px) {
     #mainText {
-      /* background-color: lightblue; */
       transform: translate(-100px, -250px);
     }
     .img-parallax{
         transform: translateY(-60%);
         margin-left: -15px;
+        height: 400px;
     }
   }
+
+/* half desktop */
+@media only screen and (min-width: 576px) and (max-width: 1200px){
+    #mainText {
+        margin-left: 30px;
+    }
+}
+
+#register-today {
+    display: none;
+}
+
+/* mobile */
+@media only screen and (max-width: 576px) {
+    .img-parallax{
+        margin-top: 0px;
+        height: 100px; 
+    }
+    #mainText{
+        font-size: 30px;
+        line-height: 36px;
+    }
+    #register-today{
+        display:block;
+    }
+    #overlay{
+        margin-top: 80px;
+    }
+}
 
 .subText {
     font-family: Helvetica;
@@ -149,21 +187,10 @@ nav.navbar{
     width: 0px;
 }
 
-.container-fluid .row {    
-    margin-left: 0px;    
-    margin-right: 0px;
-    /* overflow-x: hidden; */
-
-}
-
 /* sliding in animation  */
 .come-in {
     transform: translateX(150px);
     animation: come-in 0.8s ease forwards;
-}
-
-.come-in:nth-child(odd) {
-    /* animation-duration: 0.6s; So they look staggered */
 }
   
 @keyframes come-in {
@@ -172,4 +199,56 @@ nav.navbar{
 
 .redbg{
     background-color: #FF2F44;
+}
+
+.companies{
+    margin-top: 50px;
+}
+
+#invited-text{
+    position: relative;
+    color: #000;
+    text-decoration: none;
+}
+
+#invited-text::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#invited-text.hover::before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+@keyframes come-into {
+    to { transform: translateY(0); opacity: 1;}
+}
+
+.come-into{
+    opacity: 0;
+    transform: translateY(100px);
+    animation: come-into 2s ease forwards;
+}
+
+.footer {
+    background-color: #000;
+    padding-top: 50px;
+    padding-bottom: 300px;
+}
+
+#second-footer {
+    margin-top: 100px;   
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-top: 2px solid #FF2F44;
+    border-bottom: 2px solid #FF2F44;
 }

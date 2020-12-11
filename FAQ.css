@@ -1,0 +1,47 @@
+/* ensuring that the arrow only appears on hover */
+.arrow{
+    display:none;
+}
+
+/* hover state */
+.question:hover ~.arrow{
+    display: inline;
+}
+
+/* main question */
+.question{
+    position: relative;
+    color: #000;
+    text-decoration: none;
+}
+
+/* state before hover */
+.question::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+/* on hover */
+.question:hover::before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* on click to make the text disappear*/
+.collapse-link:hover{
+    color: #000;
+    text-decoration: none;
+}
+
+.faq{
+    margin-top: 200px;
+    margin-bottom: 300px;
+}
